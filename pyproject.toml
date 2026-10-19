@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kev-survival"
+version = "0.0.0"
+description = "CVE yayın anında CISA KEV listelenme süresinin zamansal olarak kapılı ve sansür farkındalıklı tahmini"
+readme = "README.md"
+requires-python = ">=3.13,<3.14"
+authors = [{ name = "Doygun", email = "doygun23@gmail.com" }]
+dependencies = [
+    "pandas",
+    "pyarrow",
+    "numpy",
+    "requests",
+    "matplotlib",
+    "pyyaml",
+    "gitpython",
+    "tqdm",
+]
+
+[project.optional-dependencies]
+test = ["pytest"]
+modeling = [
+    "lifelines",
+    "scikit-survival",
+    "scikit-learn",
+    "statsmodels",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra"
