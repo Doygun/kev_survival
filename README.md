@@ -1,6 +1,6 @@
 # kev_survival
 
-Code for the study *Predicting time from CVE disclosure to CISA KEV listing with temporally gated survival models*.
+Code for the study *Predicting Time to CISA KEV Listing from Information Available at CVE Disclosure: A Temporally Gated Survival Analysis*.
 
 The pipeline estimates, from the information available on the day a CVE was published, the time until the CVE is added to the CISA Known Exploited Vulnerabilities (KEV) catalog. The event of interest is KEV listing (the KEV `dateAdded` field), not first exploitation.
 
